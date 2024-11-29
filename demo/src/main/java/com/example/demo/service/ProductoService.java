@@ -1,13 +1,12 @@
-package edu.uptc.example.service;
+package com.example.demo.service;
 
-import edu.uptc.example.entityes.Book;
-import edu.uptc.example.repository.BookRepository;
+import com.example.demo.entityes.Producto;
+import com.example.demo.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @Service
 public class ProductoService {
     @Autowired

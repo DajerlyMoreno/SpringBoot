@@ -1,5 +1,8 @@
 package com.example.demo.entityes;
 
+import jakarta.persistence.*;
+
+
 @Entity
 public class DetallesVenta {
     @Id

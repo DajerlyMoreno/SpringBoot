@@ -1,5 +1,10 @@
 package com.example.demo.entityes;
 
+import jakarta.persistence.*;
+import java.util.List;
+import java.time.LocalDate;
+
+
 @Entity
 public class Venta {
     @Id
@@ -9,11 +14,11 @@ public class Venta {
     private double total;
 
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)
-    private List<DetalleVenta> detalles;
+    private List<DetallesVenta> detalles; 
 
     
 
-    public Venta(Long id, LocalDate fecha, double total, List<DetalleVenta> detalles) {
+    public Venta(Long id, LocalDate fecha, double total, List<DetallesVenta> detalles) {
         this.id = id;
         this.fecha = fecha;
         this.total = total;
@@ -47,11 +52,11 @@ public class Venta {
         this.total = total;
     }
 
-    public List<DetalleVenta> getDetalles() {
+    public List<DetallesVenta> getDetalles() {
         return detalles;
     }
 
-    public void setDetalles(List<DetalleVenta> detalles) {
+    public void setDetalles(List<DetallesVenta> detalles) {
         this.detalles = detalles;
     }
 }
